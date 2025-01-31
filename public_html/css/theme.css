@@ -476,8 +476,46 @@ footer {
   background-color: #c417eb;
 }
 
-footer a, footer p {
+footer ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 30px;
+}
+
+footer ul li a {
+  display: block;
+  text-align: center;
+  padding: 5px 0;
   color: #ffffff;
+  font-family: "Josefin Sans", serif;
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+
+footer ul li a:hover, footer ul li a.active {
+  color: #17eb22;
+}
+
+footer .copyright {
+  text-align: center;
+  color: #ffffff;
+}
+
+@media (min-width: 768px) {
+  footer .container ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  footer .container ul li a {
+    padding: 5px 15px;
+  }
+}
+
+@media (min-width: 992px) {
+  footer .container ul li a {
+    padding: 5px 25px;
+  }
 }
 
 /*# sourceMappingURL=theme.css.map */
