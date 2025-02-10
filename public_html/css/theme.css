@@ -8,8 +8,12 @@
 }
 
 .btn-default {
-  background-color: #444444;
+  background-color: rgba(68, 68, 68, 0.7);
   color: #ffffff;
+}
+
+.btn-default:hover {
+  background-color: #2b2b2b;
 }
 
 .btn-red {
@@ -17,9 +21,17 @@
   color: #ffffff;
 }
 
+.btn-red:hover {
+  background-color: #bf1028;
+}
+
 .btn-green {
   background-color: #17eb22;
   color: #ffffff;
+}
+
+.btn-green:hover {
+  background-color: #10bf19;
 }
 
 .btn-purple {
@@ -27,14 +39,26 @@
   color: #ffffff;
 }
 
+.btn-purple:hover {
+  background-color: #9f10bf;
+}
+
 .btn-info {
   background-color: #0af2cb;
   color: #ffffff;
 }
 
+.btn-info:hover {
+  background-color: #08c1a2;
+}
+
 .btn-dark {
   background-color: #eeeeee;
   color: #ffffff;
+}
+
+.btn-dark:hover {
+  background-color: #a2a2a2;
 }
 
 /* FONT PROPERTY  */
@@ -443,7 +467,7 @@ header nav ul li a {
 }
 
 header nav ul li a:hover, header nav ul li a.active {
-  color: #17eb22;
+  color: #c7f9bb;
 }
 
 @media (min-width: 768px) {
@@ -526,7 +550,7 @@ footer ul li a {
 }
 
 footer ul li a:hover, footer ul li a.active {
-  color: #17eb22;
+  color: #a0f58c;
 }
 
 footer .copyright {

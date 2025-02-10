@@ -16,31 +16,52 @@ $btn-dark: $light-gray;
 
 .btn-default{
     @extend %btn;
-    background-color: $btn-default;
+    background-color: rgba($btn-default, 0.7);
     color: $btn-default-color;
+    
+    &:hover{
+        background-color: darken($btn-default, 10);
+    }
 }
 .btn-red{
     @extend %btn;
     background-color: $btn-red;
     color: $btn-default-color;
+    &:hover{
+        background-color: darken($btn-red, 10);
+    }
 }
 .btn-green{
     @extend %btn;
     background-color: $btn-green;
     color: $btn-default-color;
+    &:hover{
+        background-color: darken($btn-green, 10);
+    }
 }
 .btn-purple{
     @extend %btn;
     background-color: $btn-purple;
     color: $btn-default-color;
+    &:hover{
+        background-color: darken($btn-purple, 10);
+        }
+        
 }
 .btn-info{
     @extend %btn;
     background-color: $btn-info;
     color: $btn-default-color;
+    &:hover{
+        background-color: darken($btn-info, 10);
+        }
+        
 }
 .btn-dark{
     @extend %btn;
     background-color: $btn-dark;
     color: $btn-default-color;
+    &:hover{
+        background-color: darken($btn-dark, 30);
+    }
 }

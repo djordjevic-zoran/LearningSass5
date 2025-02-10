@@ -30,7 +30,7 @@ header{
                     font-weight: $font-bold;
                     
                     &:hover, &.active{
-                        color: $nav-link-color;
+                        color: lighten(complement($header-bg), 35);
                     }
                 }
             } // li end
