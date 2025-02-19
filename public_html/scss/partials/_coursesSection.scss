@@ -7,7 +7,8 @@ $tbody-even-bg: $white;
 $tbody-hover-bg: darken($light-gray, 15%);
 
 .coursesSection{
-    padding: 50px 0;
+    //padding: 50px 0;
+    @include stileSection(50px, 50px, transparent);
     
     table{
         border: $table-border;

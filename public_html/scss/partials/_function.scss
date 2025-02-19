@@ -1,0 +1,46 @@
+
+
+
+@mixin radius($radius){
+    
+    @if($enable-radius){
+        border-radius: $radius;
+    }@else{
+        border-radius: 0px;
+    }
+    
+    
+}
+
+@mixin zoran-zr($top-left, $top-right, $botton-right, $botton-left){
+    @if($enable-radius){
+        border-radius: $top-left $top-right $botton-right $botton-left;
+    }@else{
+        border-radius: 0px;
+    }
+    
+}
+
+@mixin stileSection($pt, $pb, $bg){
+    padding: $pt 0 $pb;
+    background-color: $bg;
+}
+
+
+@function colorYiq($color){
+    $r: red($color);
+    $g: green($color);
+    $b: blue($color);
+    
+    $yiq: $r*0.299 + $g*0.587 + $b*0.144;
+    
+    @if($yiq > 129){
+        @return $black;
+    }@else{
+        @return $purple;
+    }
+}
+
+
+
+

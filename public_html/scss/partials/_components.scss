@@ -11,13 +11,17 @@ $btn-dark: $light-gray;
     display: inline-block;
     padding: 10px 25px;
     border: none;
-    border-radius: 5px;
+    
+    //@include radius(5px);
+    
+    @include zoran-zr(5px, 50%, 5px, 50%);
+    
 }
 
 .btn-default{
     @extend %btn;
     background-color: rgba($btn-default, 0.7);
-    color: $btn-default-color;
+    color: colorYig($btn-default);
     
     &:hover{
         background-color: darken($btn-default, 10);
@@ -26,7 +30,7 @@ $btn-dark: $light-gray;
 .btn-red{
     @extend %btn;
     background-color: $btn-red;
-    color: $btn-default-color;
+    color: colorYiq($btn-red);
     &:hover{
         background-color: darken($btn-red, 10);
     }
@@ -34,7 +38,7 @@ $btn-dark: $light-gray;
 .btn-green{
     @extend %btn;
     background-color: $btn-green;
-    color: $btn-default-color;
+    color: colorYiq($btn-green);
     &:hover{
         background-color: darken($btn-green, 10);
     }
@@ -42,7 +46,7 @@ $btn-dark: $light-gray;
 .btn-purple{
     @extend %btn;
     background-color: $btn-purple;
-    color: $btn-default-color;
+    color: colorYiq($btn-purple);
     &:hover{
         background-color: darken($btn-purple, 10);
         }
@@ -51,7 +55,7 @@ $btn-dark: $light-gray;
 .btn-info{
     @extend %btn;
     background-color: $btn-info;
-    color: $btn-default-color;
+    color: colorYiq($btn-info);
     &:hover{
         background-color: darken($btn-info, 10);
         }
@@ -60,7 +64,7 @@ $btn-dark: $light-gray;
 .btn-dark{
     @extend %btn;
     background-color: $btn-dark;
-    color: $btn-default-color;
+    color: colorYiq($btn-dark);
     &:hover{
         background-color: darken($btn-dark, 30);
     }
