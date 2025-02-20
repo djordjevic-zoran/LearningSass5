@@ -1,23 +1,48 @@
 
-$btn-default: $dark-gray;
+/*$btn-default: $dark-gray;
 $btn-default-color: $white;
 $btn-red: $red;
 $btn-green: $green;
 $btn-purple: $purple;
 $btn-info: $cyan;
-$btn-dark: $light-gray;
+$btn-dark: $light-gray;*/
+
+
+$pepco : (
+'default'   : $dark-gray,
+'red'         : $red,
+'green'   : $green,
+'purple'   : $purple,
+'info'       :  $cyan,
+'dark'      : $light-gray,
+'fancy'    : $yellow
+);
 
 %btn{
     display: inline-block;
-    padding: 10px 25px;
+    padding: 10px 20px;
     border: none;
     
-    //@include radius(5px);
+    @include zoran-zr(10px, 0, 10px, 0);
     
-    @include zoran-zr(5px, 50%, 5px, 50%);
-    
+    cursor: pointer;
 }
 
+@each $key, $value in $pepco{
+    .btn-#{$key}{
+        @extend %btn;
+        background-color: $value;
+        color: colorYiq($value);
+        
+        &:hover{
+            background-color: darken($value, 10%);
+        }
+    }
+}
+
+
+
+/*
 .btn-default{
     @extend %btn;
     background-color: rgba($btn-default, 0.7);
@@ -26,8 +51,9 @@ $btn-dark: $light-gray;
     &:hover{
         background-color: darken($btn-default, 10);
     }
-}
-.btn-red{
+}*/
+
+/*.btn-red{
     @extend %btn;
     background-color: $btn-red;
     color: colorYiq($btn-red);
@@ -68,4 +94,4 @@ $btn-dark: $light-gray;
     &:hover{
         background-color: darken($btn-dark, 30);
     }
-}
+}*/
